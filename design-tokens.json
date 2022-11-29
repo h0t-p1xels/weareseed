@@ -189,14 +189,14 @@
   ],
   "typefaces": [
     {
-      "name": "$typeface-rubik",
-      "value": "\"Rubik\", sans-serif",
-      "compiledValue": "Rubik, sans-serif"
+      "name": "$typeface-raleway",
+      "value": "\"Raleway\", sans-serif",
+      "compiledValue": "Raleway, sans-serif"
     },
     {
-      "name": "$typeface-archivo",
-      "value": "\"Archivo\", sans-serif",
-      "compiledValue": "Archivo, sans-serif"
+      "name": "$typeface-lato",
+      "value": "\"Lato\", sans-serif",
+      "compiledValue": "Lato, sans-serif"
     },
     {
       "name": "$typeface-mono",
