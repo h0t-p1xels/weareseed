@@ -1,15 +1,16 @@
 /*
  * Typography Design Tokens
  *
- * To update "design-tokens.json" for export to Storybook run "yarn gen-dt"
+ * Typeface's are imported using Google Fonts via FontSource in `gatsby-browser.js`
+ * To update `design-tokens.json` for export to Storybook run `yarn gen-dt`
  */
 
 // Typeface Design Tokens
 /**
  * @sass-export-section="typefaces"
  */
-$typeface-rubik: "Rubik", sans-serif;
-$typeface-archivo: "Archivo", sans-serif;
+$typeface-raleway: "Raleway", sans-serif;
+$typeface-lato: "Lato", sans-serif;
 $typeface-mono: "IBM Plex Mono", monospace;
 //@end-sass-export-section
 
