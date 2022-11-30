@@ -4,11 +4,15 @@ import { useStaticQuery, graphql } from "gatsby"
 const Tints = () => {
   const data = useStaticQuery(graphql`
     {
-      weareseedJson {
-        tints {
-          mapValue {
-            name
-            compiledValue
+      allDesignTokenJson {
+        edges {
+          node {
+            tints {
+              mapValue {
+                name
+                compiledValue
+              }
+            }
           }
         }
       }
@@ -32,7 +36,7 @@ const Tints = () => {
         </thead>
         <tbody className="docblock-argstable-body">
           {/*  For each table row */}
-          {data.weareseedJson.tints.map((nodes) =>
+          {data.allDesignTokenJson.edges.node.tints.map((nodes) =>
             nodes.mapValue.map((node, index) => (
               <tr key={index}>
                 <td className="css-4lbn0a">

@@ -4,10 +4,14 @@ import { useStaticQuery, graphql } from "gatsby"
 const GradientsDark = () => {
   const data = useStaticQuery(graphql`
     {
-      weareseedJson {
-        gradients__dark {
-          name
-          compiledValue
+      allDesignTokenJson {
+        edges {
+          node {
+            gradients__dark {
+              name
+              compiledValue
+            }
+          }
         }
       }
     }
@@ -39,44 +43,46 @@ const GradientsDark = () => {
         </thead>
         <tbody className="docblock-argstable-body">
           {/*  For each table row */}
-          {data.weareseedJson.gradients__dark.map((node, index) => (
-            <tr key={index}>
-              <td className="css-4lbn0a">
-                <span
-                  className="css-in3yi3"
-                  style={{
-                    textTransform: "lowercase",
-                    fontSize: "16px",
-                  }}
-                >
-                  {node.name}
-                </span>
-              </td>
-              <td>
-                <div className="css-fimcbu">
-                  <div className="css-13nzt7e">
-                    <span className="css-ks2jcn">{node.compiledValue}</span>
-                  </div>
-                </div>
-              </td>
-              <td>
-                <div className="css-13nzt7e">
-                  <span className="css-ks2jcn">
-                    <div
-                      style={{
-                        height: "33px",
-                        width: "33px",
-                        margin: "2px 4px",
-                        border: "#000013 2px solid",
-                        borderRadius: "50px",
-                        background: `${node.compiledValue}`,
-                      }}
-                    ></div>
+          {data.allDesignTokenJson.edges.node.gradients__dark.map(
+            (node, index) => (
+              <tr key={index}>
+                <td className="css-4lbn0a">
+                  <span
+                    className="css-in3yi3"
+                    style={{
+                      textTransform: "lowercase",
+                      fontSize: "16px",
+                    }}
+                  >
+                    {node.name}
                   </span>
-                </div>
-              </td>
-            </tr>
-          ))}
+                </td>
+                <td>
+                  <div className="css-fimcbu">
+                    <div className="css-13nzt7e">
+                      <span className="css-ks2jcn">{node.compiledValue}</span>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div className="css-13nzt7e">
+                    <span className="css-ks2jcn">
+                      <div
+                        style={{
+                          height: "33px",
+                          width: "33px",
+                          margin: "2px 4px",
+                          border: "#000013 2px solid",
+                          borderRadius: "50px",
+                          background: `${node.compiledValue}`,
+                        }}
+                      ></div>
+                    </span>
+                  </div>
+                </td>
+              </tr>
+            )
+          )}
           {/* / For each table row */}
         </tbody>
       </table>

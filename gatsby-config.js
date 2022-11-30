@@ -131,7 +131,12 @@ module.exports = {
         },
       },
     },
-    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-transformer-json`,
+      options: {
+        typeName: `DesignTokenJson`, // Name Json to Query
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

@@ -4,10 +4,14 @@ import { useStaticQuery, graphql } from "gatsby"
 const Spacing = () => {
   const data = useStaticQuery(graphql`
     {
-      weareseedJson {
-        spacing {
-          name
-          compiledValue
+      allDesignTokenJson {
+        edges {
+          node {
+            spacing {
+              name
+              compiledValue
+            }
+          }
         }
       }
     }
@@ -30,7 +34,7 @@ const Spacing = () => {
         </thead>
         <tbody className="docblock-argstable-body">
           {/*  For each table row */}
-          {data.weareseedJson.spacing.map((node, index) => (
+          {data.allDesignTokenJson.edges.node.spacing.map((node, index) => (
             <tr key={index}>
               <td
                 className="css-4lbn0a"

@@ -4,10 +4,14 @@ import { useStaticQuery, graphql } from "gatsby"
 const Borders = () => {
   const data = useStaticQuery(graphql`
     {
-      weareseedJson {
-        borders {
-          name
-          compiledValue
+      allDesignTokenJson {
+        edges {
+          node {
+            borders {
+              name
+              compiledValue
+            }
+          }
         }
       }
     }
@@ -30,7 +34,7 @@ const Borders = () => {
         </thead>
         <tbody className="docblock-argstable-body">
           {/*  For each table row */}
-          {data.weareseedJson.borders.map((node, index) => (
+          {data.allDesignTokenJson.edges.node.borders.map((node, index) => (
             <tr key={index}>
               <td
                 className="css-4lbn0a"
