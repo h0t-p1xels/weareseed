@@ -4,10 +4,14 @@ import { useStaticQuery, graphql } from "gatsby"
 const Radii = () => {
   const data = useStaticQuery(graphql`
     {
-      weareseedJson {
-        radii {
-          name
-          compiledValue
+      allDesignTokenJson {
+        edges {
+          node {
+            radii {
+              name
+              compiledValue
+            }
+          }
         }
       }
     }
@@ -30,7 +34,7 @@ const Radii = () => {
         </thead>
         <tbody className="docblock-argstable-body">
           {/*  For each table row */}
-          {data.weareseedJson.radii.map((node, index) => (
+          {data.allDesignTokenJson.edges.node.radii.map((node, index) => (
             <tr key={index}>
               <td
                 className="css-4lbn0a"

@@ -4,10 +4,14 @@ import { useStaticQuery, graphql } from "gatsby"
 const Tracking = () => {
   const data = useStaticQuery(graphql`
     {
-      weareseedJson {
-        tracking {
-          name
-          compiledValue
+      allDesignTokenJson {
+        edges {
+          node {
+            tracking {
+              name
+              compiledValue
+            }
+          }
         }
       }
     }
@@ -30,7 +34,7 @@ const Tracking = () => {
         </thead>
         <tbody className="docblock-argstable-body">
           {/*  For each table row */}
-          {data.weareseedJson.tracking.map((node, index) => (
+          {data.allDesignTokenJson.edges.node.tracking.map((node, index) => (
             <tr key={index}>
               <td className="css-4lbn0a">
                 <span

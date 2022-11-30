@@ -4,10 +4,14 @@ import { useStaticQuery, graphql } from "gatsby"
 const FontSizes = () => {
   const data = useStaticQuery(graphql`
     {
-      weareseedJson {
-        font_sizes {
-          name
-          compiledValue
+      allDesignTokenJson {
+        edges {
+          node {
+            font_sizes {
+              name
+              compiledValue
+            }
+          }
         }
       }
     }
@@ -30,7 +34,7 @@ const FontSizes = () => {
         </thead>
         <tbody className="docblock-argstable-body">
           {/*  For each table row */}
-          {data.weareseedJson.font_sizes.map((node, index) => (
+          {data.allDesignTokenJson.edges.node.font_sizes.map((node, index) => (
             <tr key={index}>
               <td className="css-4lbn0a">
                 <span

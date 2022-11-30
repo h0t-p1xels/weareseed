@@ -4,10 +4,14 @@ import { useStaticQuery, graphql } from "gatsby"
 const Wrappers = () => {
   const data = useStaticQuery(graphql`
     {
-      weareseedJson {
-        wrappers {
-          name
-          compiledValue
+      allDesignTokenJson {
+        edges {
+          node {
+            wrappers {
+              name
+              compiledValue
+            }
+          }
         }
       }
     }
@@ -30,7 +34,7 @@ const Wrappers = () => {
         </thead>
         <tbody className="docblock-argstable-body">
           {/*  For each table row */}
-          {data.weareseedJson.wrappers.map((node, index) => (
+          {data.allDesignTokenJson.edges.node.wrappers.map((node, index) => (
             <tr key={index}>
               <td
                 className="css-4lbn0a"

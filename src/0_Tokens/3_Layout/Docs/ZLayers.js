@@ -4,10 +4,14 @@ import { useStaticQuery, graphql } from "gatsby"
 const ZLayers = () => {
   const data = useStaticQuery(graphql`
     {
-      weareseedJson {
-        z_layers {
-          name
-          compiledValue
+      allDesignTokenJson {
+        edges {
+          node {
+            z_layers {
+              name
+              compiledValue
+            }
+          }
         }
       }
     }
@@ -30,7 +34,7 @@ const ZLayers = () => {
         </thead>
         <tbody className="docblock-argstable-body">
           {/*  For each table row */}
-          {data.weareseedJson.z_layers.map((node, index) => (
+          {data.allDesignTokenJson.edges.node.z_layers.map((node, index) => (
             <tr key={index}>
               <td
                 className="css-4lbn0a"

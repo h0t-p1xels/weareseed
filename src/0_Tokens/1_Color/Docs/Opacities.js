@@ -4,10 +4,14 @@ import { useStaticQuery, graphql } from "gatsby"
 const Opacities = () => {
   const data = useStaticQuery(graphql`
     {
-      weareseedJson {
-        opacities {
-          name
-          compiledValue
+      allDesignTokenJson {
+        edges {
+          node {
+            opacities {
+              name
+              compiledValue
+            }
+          }
         }
       }
     }
@@ -30,7 +34,7 @@ const Opacities = () => {
         </thead>
         <tbody className="docblock-argstable-body">
           {/*  For each table row */}
-          {data.weareseedJson.opacities.map((node, index) => (
+          {data.allDesignTokenJson.edges.node.opacities.map((node, index) => (
             <tr key={index}>
               <td className="css-4lbn0a">
                 <span

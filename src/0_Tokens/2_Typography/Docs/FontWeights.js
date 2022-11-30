@@ -4,10 +4,14 @@ import { useStaticQuery, graphql } from "gatsby"
 const FontWeights = () => {
   const data = useStaticQuery(graphql`
     {
-      weareseedJson {
-        font_weights {
-          name
-          compiledValue
+      allDesignTokenJson {
+        edges {
+          node {
+            font_weights {
+              name
+              compiledValue
+            }
+          }
         }
       }
     }
@@ -30,45 +34,47 @@ const FontWeights = () => {
         </thead>
         <tbody className="docblock-argstable-body">
           {/*  For each table row */}
-          {data.weareseedJson.font_weights.map((node, index) => (
-            <tr key={index}>
-              <td className="css-4lbn0a">
-                <span
-                  className="css-in3yi3"
-                  style={{
-                    textTransform: "lowercase",
-                    fontSize: "16px",
-                  }}
-                >
-                  {node.name}
-                </span>
-              </td>
-              <td>
-                <div className="css-fimcbu">
-                  <div className="css-13nzt7e">
-                    <span className="css-ks2jcn">{node.compiledValue}</span>
-                  </div>
-                </div>
-              </td>
-              <td>
-                <div className="css-13nzt7e">
-                  <span className="css-ks2jcn">
-                    <span
-                      style={{
-                        fontFamily: "Rubik, sans-serif",
-                        fontSize: "16px",
-                        fontWeight: `${node.compiledValue}`,
-                        lineHeight: "normal",
-                        textTransform: "capitalize",
-                      }}
-                    >
-                      {node.name.slice(13)} Weight
-                    </span>
+          {data.allDesignTokenJson.edges.node.font_weights.map(
+            (node, index) => (
+              <tr key={index}>
+                <td className="css-4lbn0a">
+                  <span
+                    className="css-in3yi3"
+                    style={{
+                      textTransform: "lowercase",
+                      fontSize: "16px",
+                    }}
+                  >
+                    {node.name}
                   </span>
-                </div>
-              </td>
-            </tr>
-          ))}
+                </td>
+                <td>
+                  <div className="css-fimcbu">
+                    <div className="css-13nzt7e">
+                      <span className="css-ks2jcn">{node.compiledValue}</span>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div className="css-13nzt7e">
+                    <span className="css-ks2jcn">
+                      <span
+                        style={{
+                          fontFamily: "Rubik, sans-serif",
+                          fontSize: "16px",
+                          fontWeight: `${node.compiledValue}`,
+                          lineHeight: "normal",
+                          textTransform: "capitalize",
+                        }}
+                      >
+                        {node.name.slice(13)} Weight
+                      </span>
+                    </span>
+                  </div>
+                </td>
+              </tr>
+            )
+          )}
           {/* / For each table row */}
         </tbody>
       </table>

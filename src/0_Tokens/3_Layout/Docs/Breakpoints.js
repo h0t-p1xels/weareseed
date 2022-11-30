@@ -4,10 +4,14 @@ import { useStaticQuery, graphql } from "gatsby"
 const Breakpoints = () => {
   const data = useStaticQuery(graphql`
     {
-      weareseedJson {
-        breakpoints {
-          name
-          compiledValue
+      allDesignTokenJson {
+        edges {
+          node {
+            breakpoints {
+              name
+              compiledValue
+            }
+          }
         }
       }
     }
@@ -30,7 +34,7 @@ const Breakpoints = () => {
         </thead>
         <tbody className="docblock-argstable-body">
           {/*  For each table row */}
-          {data.weareseedJson.breakpoints.map((node, index) => (
+          {data.allDesignTokenJson.edges.node.breakpoints.map((node, index) => (
             <tr key={index}>
               <td
                 className="css-4lbn0a"
