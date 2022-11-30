@@ -16,9 +16,9 @@ h4,
 h5,
 h6 {
   color: $brand-light;
-  font-family: $typeface-rubik;
+  font-family: $typeface-raleway;
   font-weight: $font-weight-x-bold;
-  line-height: $leading-tall;
+  line-height: normal;
   letter-spacing: $tracking-normal;
   margin-bottom: $spacing-m;
 }
@@ -43,7 +43,8 @@ h6 {
 }
 
 h1 {
-  font-size: $font-size-hxl;
+  // font-size: $font-size-hxl; // Changed for MVP landing page
+  font-size: $font-size-hl;
 }
 
 h2 {
@@ -70,7 +71,7 @@ h6 {
 // // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p
 p {
   color: $brand-light;
-  font-family: $typeface-archivo;
+  font-family: $typeface-lato;
   font-size: $font-size-cm;
   font-weight: $font-weight-regular;
   line-height: $leading-regular;
@@ -89,7 +90,7 @@ p {
 a,
 a:link,
 a:visited {
-  font-family: $typeface-archivo;
+  font-family: $typeface-lato;
   color: $brand-light;
   font-size: $font-size-cm;
   font-weight: $font-weight-bold;
@@ -123,7 +124,7 @@ a:visited {
 // Microcopy
 // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/small
 small {
-  font-size: $font-size-cxs;
+  font-size: $font-size-cs;
   font-weight: $font-weight-regular;
 }
 
@@ -252,7 +253,7 @@ ol {
   padding-left: $spacing-xxxxl;
 
   li {
-    font-family: $typeface-archivo;
+    font-family: $typeface-lato;
     font-size: $font-size-cm;
     font-weight: $font-weight-bold;
     color: $brand-light;
@@ -300,7 +301,7 @@ address {
 // Figure Captions
 // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption
 figcaption {
-  font-family: $typeface-rubik;
+  font-family: $typeface-raleway;
   font-size: $font-size-cs;
   font-weight: $font-weight-bold;
   line-height: $leading-tall;
@@ -352,7 +353,7 @@ blockquote {
   }
 
   & ~ figcaption {
-    font-family: $typeface-rubik;
+    font-family: $typeface-raleway;
     font-size: $font-size-cs;
     font-weight: $font-weight-bold;
     line-height: $leading-tall;

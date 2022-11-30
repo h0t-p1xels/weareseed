@@ -15,8 +15,8 @@
 import "focus-visible"
 
 // Import Google Fonts locally via FontSource
-import "@fontsource/rubik"
-import "@fontsource/archivo"
+// import "@fontsource/raleway" // Does not include Raleway Black :(
+import "@fontsource/lato"
 import "@fontsource/ibm-plex-mono"
 
 // Import styles to Gatsby
