@@ -8,7 +8,7 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Seed`,
+    title: `Seed.`,
     description: `Creating value through innovative digital experiences.`,
     // If you didn't use the resolveSiteUrl option this needs to be set
     siteUrl: `https://weareseed.co`,
