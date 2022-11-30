@@ -81,8 +81,8 @@ module.exports = {
         name: `weareseed`,
         short_name: `weareseed`,
         start_url: `/`,
-        background_color: `#06060D`,
-        theme_color: `#06060D`,
+        background_color: `#06060d`,
+        theme_color: `#06060d`,
         display: `minimal-ui`, // https://developer.mozilla.org/en-US/docs/Web/Manifest/display
         icon: `${__dirname}/favicon.png`,
       },
