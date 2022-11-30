@@ -24,8 +24,31 @@ main {
 }
 
 .content {
-  max-width: 780px;
+  max-width: 800px;
+  padding: 2rem 0 0;
   margin: auto auto auto 20vw;
+
+  h1 {
+    font-size: 3.2rem;
+    margin: 1rem 0 4rem;
+  }
+
+  a {
+    svg {
+      fill: $brand-light;
+      margin-bottom: 4px;
+    }
+
+    border-bottom: solid 3px $brand-accent;
+
+    &:hover {
+      background: none;
+      svg {
+        fill: $brand-accent;
+      }
+      border-color: $brand-light;
+    }
+  }
 }
 
 .footer {
@@ -39,11 +62,7 @@ main {
   }
 
   &__text {
-    padding: 0.4rem 0 2rem;
+    padding: 0 0 2rem;
     margin: auto auto auto 20vw;
-
-    small {
-      font-weight: $font-weight-bold;
-    }
   }
 }
