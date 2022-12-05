@@ -1,4 +1,6 @@
 import React from "react"
+import SocialLinks from "../3_Molecules/SocialLinks/SocialLinks"
+import Footer from "../4_Organisms/Footer/Footer"
 
 export default function index() {
   return (
@@ -25,33 +27,10 @@ export default function index() {
 
           <h1>Creating value through innovative digital experiences</h1>
 
-          <a
-            href="https://linkedin.com/company/weareseed"
-            rel="noopener"
-            target="_blank"
-          >
-            <svg
-              width="34"
-              height="34"
-              viewBox="0 0 34 34"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              className="linkedin-logo"
-            >
-              <path d="M0 2.43525C0 1.09013 1.11775 0 2.49687 0H31.5031C32.8822 0 34 1.09013 34 2.43525V31.5648C34 32.9099 32.8822 34 31.5031 34H2.49687C1.11775 34 0 32.9099 0 31.5648V2.43525ZM10.5039 28.4622V13.1091H5.40175V28.4622H10.5039ZM7.95388 11.0118C9.7325 11.0118 10.8396 9.8345 10.8396 8.35975C10.8077 6.85313 9.73462 5.70775 7.98787 5.70775C6.24113 5.70775 5.1 6.85525 5.1 8.35975C5.1 9.8345 6.20713 11.0118 7.91988 11.0118H7.95388ZM18.3834 28.4622V19.8879C18.3834 19.4289 18.4174 18.9699 18.5534 18.6426C18.921 17.7267 19.7604 16.7769 21.1714 16.7769C23.018 16.7769 23.7554 18.1836 23.7554 20.2491V28.4622H28.8575V19.6562C28.8575 14.9388 26.3415 12.7458 22.984 12.7458C20.2768 12.7458 19.0634 14.2332 18.3834 15.2809V15.334H18.3494C18.3607 15.3163 18.372 15.2986 18.3834 15.2809V13.1091H13.2834C13.3471 14.5499 13.2834 28.4622 13.2834 28.4622H18.3834Z" />
-            </svg>
-            <span className="sr-only">LinkedIn company profile</span>
-          </a>
+          <SocialLinks />
         </div>
       </main>
-      <footer className="footer">
-        <div className="footer__inner">
-          <hr />
-          <p className="footer__text">
-            <small>&copy; {new Date().getFullYear()} Seed.</small>
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }

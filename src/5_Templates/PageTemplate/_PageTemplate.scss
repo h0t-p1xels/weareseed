@@ -8,10 +8,6 @@
 // Temp page styling for landing page
 // ==================================
 
-* {
-  transition: all 0.3s ease-in-out;
-}
-
 .container {
   display: flex;
   flex-direction: column;
@@ -99,29 +95,6 @@ main {
       .linkedin-logo {
         fill: $brand-accent;
       }
-    }
-  }
-}
-
-.footer {
-  &__inner {
-    margin: 0;
-
-    & hr {
-      margin: 1rem auto;
-    }
-  }
-
-  &__text {
-    padding: 0 0 2rem;
-    margin: auto 0 auto;
-
-    @media screen and (min-width: 600px) {
-      margin: auto auto auto 10vw;
-    }
-
-    @media screen and (min-width: 1100px) {
-      margin: auto auto auto 20vw;
     }
   }
 }
