@@ -1,5 +1,6 @@
 import React from "react"
 import SocialLinks from "../3_Molecules/SocialLinks/SocialLinks"
+import Footer from "../4_Organisms/Footer/Footer"
 
 export default function index() {
   return (
@@ -29,14 +30,7 @@ export default function index() {
           <SocialLinks />
         </div>
       </main>
-      <footer className="footer">
-        <div className="footer__inner">
-          <hr />
-          <p className="footer__text">
-            <small>&copy; {new Date().getFullYear()}</small>
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
