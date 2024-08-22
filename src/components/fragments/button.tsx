@@ -22,7 +22,7 @@ const buttonVariants = cva(
 				secondary:
 					"bg-slate-100 text-slate-900 hover:bg-slate-100/80 dark:bg-slate-800 dark:text-slate-50 dark:hover:bg-slate-800/80",
 				ghost:
-					"rounded-full text-ally-key-black-950 dark:text-ally-light-100 focus:text-ally-key-black-950 hover:text-ally-key-black-950 focus:bg-ally-light-100 hover:bg-ally-light-100 dark:hover:bg-ally-key-black-800 dark:focus:bg-ally-key-black-800 focus:outline-0",
+					"rounded-full text-seed-dark-950 dark:text-seed-light-100 focus:text-seed-dark-950 hover:text-seed-dark-950 focus:bg-seed-light-100 hover:bg-seed-light-100 dark:hover:bg-seed-dark-800 dark:focus:bg-seed-dark-800 focus:outline-0",
 				link: "text-slate-900 underline-offset-4 hover:underline dark:text-slate-50"
 			},
 			size: {
