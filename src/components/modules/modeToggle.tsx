@@ -37,7 +37,7 @@ export function ModeToggle() {
 				<Button
 					variant="ghost"
 					size="icon"
-					className="hover:bg-ally-light-100 focus:bg-ally-light-100 data-[state=open]:bg-ally-light-100 dark:hover:bg-ally-key-black-900 dark:focus:bg-ally-key-black-900 dark:data-[state=open]:bg-ally-key-black-900 cursor-pointer"
+					className="hover:bg-seed-light-100 focus:bg-seed-light-100 data-[state=open]:bg-seed-light-100 dark:hover:bg-seed-dark-900 dark:focus:bg-seed-dark-900 dark:data-[state=open]:bg-seed-dark-900 cursor-pointer"
 				>
 					<VscColorMode className="h-[1.5rem] w-[1.5rem] scale-100 transition-all" />
 					<span className="sr-only">Toggle theme</span>
@@ -46,19 +46,19 @@ export function ModeToggle() {
 			<DropdownMenuContent align="end">
 				<DropdownMenuItem
 					onClick={() => setThemeState("system")}
-					className="hover:bg-ally-magenta-600 focus:bg-ally-magenta-600 hover:text-ally-light-50 focus:text-ally-light-50 dark:hover:bg-ally-magenta-600 dark:focus:bg-ally-magenta-600 dark:hover:text-ally-light-50 dark:focus:text-ally-light-50"
+					className="hover:bg-seed-tangerine-600 focus:bg-seed-tangerine-600 hover:text-seed-light-50 focus:text-seed-light-50 dark:hover:bg-seed-tangerine-600 dark:focus:bg-seed-tangerine-600 dark:hover:text-seed-light-50 dark:focus:text-seed-light-50"
 				>
 					Auto
 				</DropdownMenuItem>
 				<DropdownMenuItem
 					onClick={() => setThemeState("theme-light")}
-					className="hover:bg-ally-yellow-400 focus:bg-ally-yellow-400 hover:text-ally-key-black-950 focus:text-ally-key-black-950 dark:hover:bg-ally-yellow-400 dark:focus:bg-ally-yellow-400 dark:hover:text-ally-key-black-950 dark:focus:text-ally-key-black-950"
+					className="hover:bg-seed-tangerine-400 focus:bg-seed-tangerine-400 hover:text-seed-dark-950 focus:text-seed-dark-950 dark:hover:bg-seed-tangerine-400 dark:focus:bg-seed-tangerine-400 dark:hover:text-seed-dark-950 dark:focus:text-seed-dark-950"
 				>
 					Light
 				</DropdownMenuItem>
 				<DropdownMenuItem
 					onClick={() => setThemeState("dark")}
-					className="hover:bg-ally-cyan-400 focus:bg-ally-cyan-400 hover:text-ally-key-black-950 focus:text-ally-key-black-950 dark:hover:bg-ally-cyan-400 dark:focus:bg-ally-cyan-400 dark:hover:text-ally-key-black-950 dark:focus:text-ally-key-black-950"
+					className="hover:bg-seed-tangerine-400 focus:bg-seed-tangerine-400 hover:text-seed-dark-950 focus:text-seed-dark-950 dark:hover:bg-seed-tangerine-400 dark:focus:bg-seed-tangerine-400 dark:hover:text-seed-dark-950 dark:focus:text-seed-dark-950"
 				>
 					Dark
 				</DropdownMenuItem>
