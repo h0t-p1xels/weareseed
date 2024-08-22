@@ -2,4 +2,4 @@
 
 Creating value through innovative digital experiences.
 
-[weareseed.co](https://weareseed.co)
+[weareseed.studio](https://weareseed.studio)
