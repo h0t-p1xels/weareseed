@@ -19,8 +19,8 @@ export default defineConfig({
 			description:
 				"SEED Studio - Creating value through innovative digital experiences.",
 			start_url: "/", // index
-			theme_color: "#fefefe", // ally-light-50
-			background_color: "#0f172a", // ally-key-black-950
+			theme_color: "#fefefe", // seed-light-50
+			background_color: "#0f172a", // seed-dark-950
 			display: "standalone"
 		})
 	]
